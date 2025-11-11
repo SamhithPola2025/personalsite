@@ -3,38 +3,59 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>samhith's corner</title>
+    <title>Samhith's Corner</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Spanish Language Toggle Button -->
-    <button id="language-toggle" class="top-right">español</button>
+    <!-- Language Toggle -->
+    <button id="language-toggle" class="top-right">Español</button>
 
-    <h1 id="welcome-text">hey welcome to my site</h1>
-    <p id="intro-text">this is my personal corner of the internet</p>
+    <!-- Header Section -->
+    <header>
+        <h1 id="welcome-text">Hey, welcome to my site</h1>
+        <p id="intro-text">This is my personal corner of the internet</p>
+    </header>
 
-    <section>
-        <h2 id="about-title">about me</h2>
-        <p id="about-text">hi, i'm samhith. i love coding, creating, and exploring new things in general. this site is where i share my projects and ideas.</p>
-    </section>
+    <!-- About Me Section -->
+    <main>
+        <section id="about">
+            <h2 id="about-title">About Me</h2>
 
-    <section>
-        <h2 id="projects-title">my projects</h2>
-        <ul id="projects-list">
-            <li>a theory of evolution (a game i made for a hackclub event, not actually science related.)</li>
-            <li>blog platform: writing about my experiences (soon to be on this website itself)</li>
-            <li>ramsey: a desktop assistant that eats your files (mostly just for fun)</li>
-            <li>celestial-combat: a game i made using python because who doesnt love torturing themselves with python gamedev (this was before i found out about unity)</li>
-        </ul>
-    </section>
+            <!-- About Me Image -->
+            <img id="about-image" src="your-photo.jpg" alt="Photo of Samhith">
 
-    <section>
-        <h2 id="contact-title">contact me</h2>
-        <p id="contact-text">you can reach me at <a href="mailto:samhith.pola@gmail.com">samhith.pola@gmail.com</a> or find me on the <a href="https://hackclub.com">hackclub slack (cool community for teenage coders!)</a>.</p>
-    </section>
+            <p id="about-text">
+                Hi, I'm Samhith. I love coding, creating, and exploring new things in general. 
+                This site is where I share my projects and ideas.
+            </p>
+        </section>
 
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 id="projects-title">My Projects</h2>
+            <ul id="projects-list">
+                <li>A Theory of Evolution (a game I made for a Hack Club event, not actually science related.)</li>
+                <li>Blog platform: writing about my experiences (soon to be on this website itself)</li>
+                <li>Ramsey: a desktop assistant that eats your files (mostly just for fun)</li>
+                <li>Celestial-Combat: a game I made using Python because who doesn't love torturing themselves with Python gamedev (this was before I found out about Unity)</li>
+                <li>IvoryScript: a scripting language I made using Java using the Crafting Interpreters tutorial and 2 weeks of time!</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 id="contact-title">Contact Me</h2>
+            <p id="contact-text">
+                You can reach me at 
+                <a href="mailto:samhith.pola@gmail.com">samhith.pola@gmail.com</a> or find me on the 
+                <a href="https://hackclub.com">Hack Club Slack (cool community for teenage coders!)</a>.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 samhith's corner. all rights reserved.</p>
+        <p>&copy; 2025 Samhith's Corner. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

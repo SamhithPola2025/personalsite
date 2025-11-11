@@ -2,7 +2,6 @@ document.getElementById('language-toggle').addEventListener('click', () => {
     const isEnglish = document.getElementById('language-toggle').innerText === 'español';
 
     if (isEnglish) {
-        // Switch to Spanish
         document.getElementById('language-toggle').innerText = 'english';
         document.getElementById('welcome-text').innerText = 'hola, bienvenido a mi sitio';
         document.getElementById('intro-text').innerText = 'este es mi rincón personal de internet';
@@ -18,7 +17,6 @@ document.getElementById('language-toggle').addEventListener('click', () => {
         document.getElementById('contact-title').innerText = 'contáctame';
         document.getElementById('contact-text').innerHTML = `puedes contactarme en <a href="mailto:samhith.pola@gmail.com">samhith.pola@gmail.com</a> o encontrarme en el <a href="https://hackclub.com">slack de hackclub (una comunidad genial para programadores adolescentes!)</a>.`;
     } else {
-        // Switch back to English
         document.getElementById('language-toggle').innerText = 'español';
         document.getElementById('welcome-text').innerText = 'hey welcome to my site';
         document.getElementById('intro-text').innerText = 'this is my personal corner of the internet';
