@@ -1,47 +1,52 @@
 /* General Styles */
 body {
-    font-family: 'Helvetica Neue', sans-serif;
-    background: #eef2f7;
-    color: #2c3e50;
+    font-family: 'Roboto', sans-serif;
+    background: #121212;
+    color: #e0e0e0;
     margin: 0;
-    padding: 60px 40px;
+    padding: 50px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 60px; /* space between sections */
+    gap: 50px; /* space between sections */
 }
 
 /* Header */
 h1 {
-    font-size: 3rem;
-    color: #1abc9c;
-    margin-bottom: 40px;
+    font-size: 3.5rem;
+    color: #bb86fc;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 h2 {
-    font-size: 2.7rem;
-    margin-buttom: 800px;
+    font-size: 2.5rem;
+    color: #03dac6;
+    margin-bottom: 20px;
+    text-transform: capitalize;
 }
 
 /* Paragraphs */
 p {
-    font-size: 1.2rem;
-    max-width: 650px;
-    margin: 15px 0;
-    line-height: 1.8;
-    text-align: center;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 10px 0;
+    line-height: 1.6;
+    text-align: justify;
+    color: #b0b0b0;
 }
 
 /* Links */
 a {
-    color: #3498db;
+    color: #bb86fc;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s ease;
 }
 
 a:hover {
-    color: #2980b9;
+    color: #3700b3;
     text-decoration: underline;
 }
 
@@ -49,56 +54,94 @@ a:hover {
 ul {
     list-style: none;
     padding: 0;
-    margin: 30px 0;
+    margin: 20px 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
 }
 
 li {
-    background: #fff;
-    padding: 25px;
-    border-radius: 14px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px); /* Blur background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Softer shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    color: #e0e0e0;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 li:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    transform: translateY(-10px); /* More pronounced hover effect */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+/* Add a title and description inside the cards */
+li h3 {
+    font-size: 1.5rem;
+    color: #bb86fc;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+li p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Optional: Add a button inside the card */
+li > a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #03dac6;
+    color: #121212;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+li > a:hover {
+    background-color: #018786;
+    transform: scale(1.05);
 }
 
 /* About Me Image */
 #about-image {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 20px 0;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    margin: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Language Toggle Button */
 .top-right {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #1abc9c;
-    color: white;
+    top: 15px;
+    right: 15px;
+    background-color: #03dac6;
+    color: #121212;
     border: none;
-    padding: 12px 20px;
-    font-size: 1rem;
+    padding: 10px 18px;
+    font-size: 0.9rem;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 6px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .top-right:hover {
-    background-color: #16a085;
-    transform: scale(1.05);
+    background-color: #018786;
+    transform: scale(1.1);
 }
 
 /* Section spacing */
@@ -107,5 +150,22 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px; /* spacing between elements inside sections */
+    gap: 20px; /* spacing between elements inside sections */
+}
+
+/* Blog Button - Larger Style */
+.blog-button {
+    font-size: 2rem; /* Larger font size */
+    padding: 15px 30px; /* Bigger padding */
+    background-color: #03dac6; /* Same background color */
+    color: #121212; /* Same text color */
+    text-decoration: none;
+    font-weight: 700; /* Slightly bolder text */
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.blog-button:hover {
+    background-color: #018786; /* Darker hover color */
+    transform: scale(1.1); /* Slightly larger on hover */
 }
