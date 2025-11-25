@@ -4,5 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Post 1 - Samhith's Corner</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css"> <!-- Adjusted path for styles.css -->
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script> <!-- Showdown.js -->
 </head>
+<body>
+    <header>
+        <h1>Blog Post 1 - 50 Days in Hack Club</h1>
+    </header>
+
+    <main>
+        <div id="markdown-content">
+            <!-- Markdown content will be loaded here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Samhith's Corner. All rights reserved.</p>
+        <a href="../blog.html">Back to Blog</a>
+    </footer>
+
+    <script>
+        // JavaScript to fetch and render the Markdown file
+        const markdownFile = 'post1.md'; // Path to your Markdown file
+        const markdownContainer = document.getElementById('markdown-content');
+        const converter = new showdown.Converter();
+
+        fetch(markdownFile)
+            .then(response => response.text())
+            .then(markdown => {
+                markdownContainer.innerHTML = converter.makeHtml(markdown);
+            })
+            .catch(error => {
+                console.error('Error loading Markdown file:', error);
+                markdownContainer.innerHTML = '<p>Failed to load content.</p>';
+            });
+    </script>
+</body>
+</html>
