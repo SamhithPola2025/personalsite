@@ -4,18 +4,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samhith's Corner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button id="language-toggle" class="top-right">Español</button>
+    <nav class="navbar">
+        <span class="nav-brand">Samhith</span>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="blog.html">Blog</a>
+        </div>
+        <button id="language-toggle">Español</button>
+    </nav>
 
-    <header>
+    <section class="hero">
         <h1 id="welcome-text">Hey, welcome to my site</h1>
-    </header>
-
-    <header>
-        <a href="blog.html" class="button blog-button">Go to Blog</a>
-    </header>
+        <p id="intro-text" class="hero-subtitle">This is my personal corner of the internet — a place where I share my projects and ideas.</p>
+        <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="blog.html" class="btn btn-secondary">Go to Blog</a>
+        </div>
+    </section>
 
     <main>
         <section id="about">
@@ -36,7 +49,7 @@
                 </li>
                 <li>
                     <h3>BitReactor</h3>
-                    <p>A CPU architecture/simulator that I made for a hackclub event, but I also learnt a LOT from this, honorable mention to <a href="https://cpu.land" target="_blank">cpu.land</a> for teaching me a lot about CPUs and how they work!</p>
+                    <p>A CPU architecture/simulator I made for a Hack Club event — I learnt a LOT from this. Shoutout to <a href="https://cpu.land" target="_blank">cpu.land</a> for teaching me how CPUs work!</p>
                     <a href="https://github.com/SamhithPola2025/BitReactor">Learn More</a>
                 </li>
                 <li>
@@ -51,16 +64,17 @@
                 </li>
                 <li>
                     <h3>Celestial-Combat</h3>
-                    <p>A game I made using Python because who doesn't love torturing themselves with Python gamedev (this was before I found out about Unity).</p>
+                    <p>A game I made with Python — because who doesn't love torturing themselves with Python gamedev? (This was before I discovered Unity.)</p>
                     <a href="https://github.com/SamhithPola2025/Celestial-Combat">View Project</a>
                 </li>
                 <li>
                     <h3>IvoryScript</h3>
-                    <p>A scripting language I made using Java with the Crafting Interpreters tutorial and 2 weeks of time!</p>
+                    <p>A scripting language I built with Java using the Crafting Interpreters tutorial and 2 weeks of determination!</p>
                     <a href="https://github.com/SamhithPola2025/IvoryScript">Learn More</a>
                 </li>
             </ul>
         </section>
+
         <section id="contact">
             <h2 id="contact-title">Contact Me</h2>
             <p id="contact-text">

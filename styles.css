@@ -1,171 +1,364 @@
-/* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    background: #121212;
-    color: #e0e0e0;
+/* ============================================================
+   Design Tokens
+   ============================================================ */
+:root {
+    --bg-primary:    #0d0d14;
+    --bg-secondary:  #13131e;
+    --bg-card:       #1a1a28;
+    --bg-card-hover: #202032;
+    --accent-purple: #bb86fc;
+    --accent-teal:   #03dac6;
+    --accent-teal-dark: #019a8c;
+    --text-primary:  #e2e8f0;
+    --text-secondary: #94a3b8;
+    --border:        rgba(255, 255, 255, 0.08);
+    --shadow-sm:     0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-md:     0 8px 24px rgba(0, 0, 0, 0.5);
+    --shadow-lg:     0 16px 48px rgba(0, 0, 0, 0.6);
+    --radius-sm:     6px;
+    --radius-md:     12px;
+    --radius-lg:     16px;
+    --font:          'Inter', sans-serif;
+    --max-width:     1000px;
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
-    padding: 50px 30px;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   Navbar
+   ============================================================ */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 0 2rem;
+    height: 60px;
+    background: rgba(13, 13, 20, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-brand {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-purple);
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-purple);
+    text-decoration: none;
+}
+
+/* Language toggle inside navbar */
+#language-toggle {
+    background: transparent;
+    border: 1px solid var(--accent-teal);
+    color: var(--accent-teal);
+    padding: 6px 14px;
+    font-family: var(--font);
+    font-size: 0.82rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+
+#language-toggle:hover {
+    background: var(--accent-teal);
+    color: var(--bg-primary);
+}
+
+/* ============================================================
+   Hero Section
+   ============================================================ */
+.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px; /* space between sections */
+    text-align: center;
+    padding: 6rem 2rem 5rem;
+    background: radial-gradient(ellipse at 50% 0%, rgba(187, 134, 252, 0.1) 0%, transparent 70%);
 }
 
-/* Header */
-h1 {
-    font-size: 3.5rem;
-    color: #bb86fc;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--text-secondary);
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--accent-teal);
+    color: var(--bg-primary);
+    box-shadow: 0 0 20px rgba(3, 218, 198, 0.25);
+}
+
+.btn-primary:hover {
+    background: var(--accent-teal-dark);
+    box-shadow: 0 0 28px rgba(3, 218, 198, 0.4);
+    color: var(--bg-primary);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--accent-purple);
+    border: 1.5px solid var(--accent-purple);
+}
+
+.btn-secondary:hover {
+    background: rgba(187, 134, 252, 0.1);
+    color: var(--accent-purple);
+}
+
+/* ============================================================
+   Main Layout
+   ============================================================ */
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+/* ============================================================
+   Sections
+   ============================================================ */
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
 h2 {
-    font-size: 2.5rem;
-    color: #03dac6;
-    margin-bottom: 20px;
-    text-transform: capitalize;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--accent-teal);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
 }
 
-/* Paragraphs */
+/* Section divider accent */
+h2::before {
+    content: '// ';
+    color: var(--accent-purple);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
 p {
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: 10px 0;
-    line-height: 1.6;
-    text-align: justify;
-    color: #b0b0b0;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    max-width: 660px;
+    line-height: 1.75;
 }
 
-/* Links */
 a {
-    color: #bb86fc;
+    color: var(--accent-purple);
     text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    font-weight: 500;
+    transition: color 0.2s;
 }
 
 a:hover {
-    color: #3700b3;
+    color: var(--accent-teal);
     text-decoration: underline;
 }
 
-/* Lists as Cards */
+/* ============================================================
+   Project Cards
+   ============================================================ */
 ul {
     list-style: none;
-    padding: 0;
-    margin: 20px 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1.25rem;
     width: 100%;
-    max-width: 1000px;
 }
 
 li {
-    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
-    backdrop-filter: blur(10px); /* Blur background */
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Softer shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    color: #e0e0e0;
-    font-size: 1rem;
-    font-weight: 500;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, background 0.2s;
 }
 
 li:hover {
-    transform: translateY(-10px); /* More pronounced hover effect */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(187, 134, 252, 0.3);
+    background: var(--bg-card-hover);
 }
 
-/* Add a title and description inside the cards */
 li h3 {
-    font-size: 1.5rem;
-    color: #bb86fc;
-    margin-bottom: 10px;
-    text-transform: capitalize;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
 }
 
 li p {
     font-size: 0.9rem;
-    color: #b0b0b0;
-    line-height: 1.4;
-    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    flex: 1;
+    max-width: none;
 }
 
-/* Optional: Add a button inside the card */
 li > a {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #03dac6;
-    color: #121212;
-    text-decoration: none;
-    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    padding: 7px 16px;
+    background: var(--accent-teal);
+    color: var(--bg-primary);
+    font-size: 0.82rem;
     font-weight: 600;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    align-self: flex-start;
+    transition: background 0.2s, transform 0.2s;
 }
 
 li > a:hover {
-    background-color: #018786;
-    transform: scale(1.05);
-}
-
-/* About Me Image */
-#about-image {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 15px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Language Toggle Button */
-.top-right {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    background-color: #03dac6;
-    color: #121212;
-    border: none;
-    padding: 10px 18px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.top-right:hover {
-    background-color: #018786;
-    transform: scale(1.1);
-}
-
-/* Section spacing */
-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* spacing between elements inside sections */
-}
-
-/* Blog Button - Larger Style */
-.blog-button {
-    font-size: 2rem; /* Larger font size */
-    padding: 15px 30px; /* Bigger padding */
-    background-color: #03dac6; /* Same background color */
-    color: #121212; /* Same text color */
+    background: var(--accent-teal-dark);
+    transform: translateX(2px);
     text-decoration: none;
-    font-weight: 700; /* Slightly bolder text */
-    border-radius: 10px; /* Rounded corners */
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: var(--bg-primary);
 }
 
-.blog-button:hover {
-    background-color: #018786; /* Darker hover color */
-    transform: scale(1.1); /* Slightly larger on hover */
+/* ============================================================
+   Contact Section
+   ============================================================ */
+#contact p {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.75rem;
+    max-width: 580px;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 640px) {
+    .navbar {
+        padding: 0 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .hero {
+        padding: 4rem 1.5rem 3.5rem;
+    }
+
+    main {
+        padding: 0 1.5rem 4rem;
+        gap: 3.5rem;
+    }
+
+    ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 420px) {
+    .nav-links {
+        display: none;
+    }
 }
