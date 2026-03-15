@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Personal Website",
+        "description": "What you're seeing right now!",
+        "link": "samhith.dev",
+        "tech": ["Astro, JS"]
+    },
+    {
+        "name": "BitReactor",
+        "description": "An 8-bit CPU architecture simulator designed for experimenting with low-level programming concepts and testing custom instructions. It provides a virtual environment to simulate CPU operations, memory management, and device I/O.",
+        "link": "https://github.com/SamhithPola2025/BitReactor",
+        "tech": ["C++, CMake"]
+    },
+    {
+        "name": "IvoryScript",
+        "description": "A lightweight, dynamically-typed scripting language implemented in Java. Simple syntax, easy to learn, fun to use.",
+        "link": "https://github.com/SamhithPola2025/IvoryScript",
+        "tech": ["Java"]
+    },
+    {
+        "name": "Choc3DP",
+        "description": "A 3D printer for the Undercity hackathon in San Francisco made in 3 days, that you guessed it prints chocolate.",
+        "link": "https://github.com/SamhithPola2025/Choc3DP",
+        "tech": ["Klipper, Python"]
+    },
+    {
+        "name": "CForge",
+        "description": "CircuitForge is a breakout board for the popular ESP32-s3 chip that includes many breakout pins, is compatible with any other ESP32 setup (for the most part), and has programming via USB 2.0.",
+        "link": "https://github.com/SamhithPola2025/CForge",
+        "tech": ["C++, KiCad"]
+    },
+    {
+        "name": "BouncyLabs",
+        "description": "A very simple 2D physics engine built in C++! (Work in progress)",
+        "link": "https://github.com/SamhithPola2025/BouncyLabs",
+        "tech": ["C++, CMake, C"]
+    }
+]
