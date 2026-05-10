@@ -1,0 +1,6 @@
+[{
+    "name": "Making an API in C (with Mongoose)",
+    "header": "Build a simple API using the Mongoose library in C",
+    "subnotes": "This guide was made entirely by me for a Hack Club event called RaspAPI. I recommend you check out raspapi.hackclub.com",
+    "slug": "mongooseCAPI"
+}]

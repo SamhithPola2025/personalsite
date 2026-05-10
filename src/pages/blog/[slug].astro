@@ -1,0 +1,41 @@
+---
+import { readFile } from 'fs/promises';
+import path from 'path';
+import { marked } from 'marked';
+import '../../styles/style.css';
+
+export async function getStaticPaths() {
+  return [
+    { params: { slug: "mongooseCAPI" } }
+  ];
+}
+
+const { slug } = Astro.params;
+
+const filePath = path.join(process.cwd(), "src/content/blog", `${slug}.md`);
+const file = await readFile(filePath, "utf-8");
+
+const html = marked(file);
+---
+
+<html class="blog">
+<meta charset="UTF-8" />
+  <head>
+    <title>{slug}</title>
+  </head>
+
+  <body>
+  <div class="page">
+
+  <div class="card">
+    <a href="/blog" class="back-btn">
+        <p>See all blog pages</p>
+    </a>
+    
+    <div class="prose">
+      <Fragment set:html={html} />
+    </div>
+  </div>
+</div>
+</body>
+</html>

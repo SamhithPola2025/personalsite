@@ -1,5 +1,4 @@
-[
-    {
+[{
         "name": "Personal Website",
         "description": "What you're seeing right now!",
         "link": "samhith.dev",
@@ -12,10 +11,10 @@
         "tech": ["C++, CMake"]
     },
     {
-        "name": "IvoryScript",
-        "description": "A lightweight, dynamically-typed scripting language implemented in Java. Simple syntax, easy to learn, fun to use.",
-        "link": "https://github.com/SamhithPola2025/IvoryScript",
-        "tech": ["Java"]
+        "name": "IvoryScript V2",
+        "description": "A lightweight, dynamically-typed scripting language implemented in Java. Simple syntax, easy to learn, fun to use. (P.S. You don't want to know what happened to V1)",
+        "link": "https://github.com/SamhithPola2025/IvoryScript-V2",
+        "tech": ["C++, CMake"]
     },
     {
         "name": "Choc3DP",

@@ -1,0 +1,43 @@
+---
+import '../styles/style.css';
+import data from '../data/blogs.json';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+  </head>
+
+  <body>
+    <a href="/" target="_self">
+        <img src="/exitbutton.png" alt="Blog" class="btn">
+    </a>
+
+    <header>
+      <h1>Welcome to my Blog!</h1>
+      <h2>Check out my blog posts below!</h2>
+    </header>
+
+    <main>
+      <div class="blog-posts">
+        {data.map((post) => (
+          <div class="card">
+            <h3>{post.name}</h3>
+
+            <p class="header">
+              {post.header}
+            </p>
+
+            <p class="description">
+              {post.subnotes}
+            </p>
+
+            <a href={`/blog/${post.slug}`}>read more</a>
+          </div>
+        ))}
+      </div>
+    </main>
+  </body>
+</html>
