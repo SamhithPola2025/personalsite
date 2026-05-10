@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'ComicShanns';
-    src: url('/fonts/ComicShanns.woff2') format('woff2');
+    font-family: 'Googlesans-code';
+    src: url('/fonts/Googlesans-code.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    font-family: 'ComicShanns', sans-serif;
+    font-family: 'Googlesans-code', sans-serif;
     margin: 0;
     padding: 2rem;
     text-align: center;
@@ -110,7 +110,7 @@ html.blog body {
 .links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 5rem;
     margin-top: 1rem;
 }
 
@@ -126,19 +126,19 @@ html.blog body {
 }
 
 .btn-wrapper .btn {
-    width: 200px;
+    width: 230px;
     height: auto;
     display: block;
     position: relative;
-    z-index: 2;
+    margin-top: 20px;
 }
 
 .hover-arrows {
     position: absolute;
-    top: 65%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 260px;
+    width: 320px;
     height: auto;
     opacity: 0;
     transition: opacity 0.2s ease;
